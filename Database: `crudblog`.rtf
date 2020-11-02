@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.9.3\
+-- https://www.phpmyadmin.net/\
+--\
+-- Host: localhost:8889\
+-- Generation Time: Nov 01, 2020 at 06:45 AM\
+-- Server version: 5.7.26\
+-- PHP Version: 7.4.2\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Database: `crudblog`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `migrations`\
+--\
+\
+CREATE TABLE `migrations` (\
+  `id` int(10) UNSIGNED NOT NULL,\
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,\
+  `batch` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;\
+\
+--\
+-- Dumping data for table `migrations`\
+--\
+\
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES\
+(1, '2019_04_12_204847_create_posts_table', 1);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `posts`\
+--\
+\
+CREATE TABLE `posts` (\
+  `id` bigint(20) UNSIGNED NOT NULL,\
+  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,\
+  `content` varchar(2000) COLLATE utf8mb4_unicode_ci NOT NULL,\
+  `category` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,\
+  `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,\
+  `created_at` timestamp NULL DEFAULT NULL,\
+  `updated_at` timestamp NULL DEFAULT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;\
+\
+--\
+-- Dumping data for table `posts`\
+--\
+\
+INSERT INTO `posts` (`id`, `title`, `content`, `category`, `slug`, `created_at`, `updated_at`) VALUES\
+(1, 'First 3D survival-horror video game', 'According to the Guinness World Records, the very first 3D survival-horror video game, is widely considered to be the original \\'Alone in the Dark\\', released in 1992 for the PC. Survival horror is usually defined as a game in which the player must fend off supernatural attacks.\\r\\n\\r\\nMore info at 
+\f1 \uc0\u55357 \u56697 \u65039 
+\f0  
+\f1 \uc0\u55357 \u56833 
+\f0  : https://en.wikipedia.org/wiki/Alone_in_the_Dark_(1992_video_game)', '2000 - 1990', 'first-3d-survival-horror-video-game', '2020-10-26 02:27:55', '2020-10-26 18:03:56'),\
+(2, 'The Game Boy version of Alien\'b3', 'The Game Boy version of Alien\'b3 differs significantly from the console games based on the third Alien film. Unlike the more shooter-oriented action on the consoles, this title is played from a top-down perspective, with a greater emphasis on exploration, acquiring items to beat limited puzzles, and survival. As Ripley, you must navigate the corridors of the Fury 161 prison, searching for items to aid your escape. Unlike the film it is based on, multiple Aliens are running loose and attacking the prisoners, plus an Alien Queen nesting in the furnace. The player must map out the labyrinthine halls and ventilation systems to easily move around the complex. They must also find weapons to defend Ripley from the Aliens, along with a flamethrower and fuel to torch their eggs. Only after destroying the Queen and her eggs, may Ripley activate the crashed escape pod and leave the planet. -LaunchBox Games Database', '2000 - 1990', 'the-game-boy-version-of-alien3', '2020-10-26 02:29:16', '2020-10-26 02:29:16'),\
+(7, 'American McGee\\'s Alice (For PC)', 'Shortly after her second adventure, Through the Looking-Glass, Alice\\'s house is burnt down by an accidental fire, killing her family and leaving her as the only survivor. As time progresses Alice loses touch with reality. She is institutionalized in Rutledge Asylum, where she is observed and treated by Dr. Heironymous Wilson. Alice\\'s only possession in Rutledge is a stuffed rabbit. Ten years after Alice was committed to Rutledge, she finds herself sucked back into a Wonderland that has been twisted by her own broken mind. The White Rabbit summons Alice to aid a radically altered Wonderland, which became a twisted version of itself as it came under the horrible rule of the Queen of Hearts. The Cheshire Cat serves as Alice\\'s companion throughout the game, frequently appearing to guide her with cryptic comments.', '2000 - 1990', 'american-mcgees-alice-for-pc', '2020-10-26 22:47:23', '2020-10-26 22:47:23'),\
+(8, 'Babysitter Bloodbath (For PC)', 'For 22 years Neokalus Burr has stared at an empty wall in the bowels of Monroe State Mental Hospital. But tonight he\\'s ESCAPED to continue his BLOOD SOAKED murder rampage! It\\'s also your first night babysitting', '2010 - 2000', 'babysitter-bloodbath-for-pc', '2020-10-26 22:48:52', '2020-10-26 22:48:52'),\
+(11, 'Resident Evil (For PlayStation Classic)', 'Raccoon City has been completely overrun by mutant beasts and bloodthirsty zombies. You are a member of S.T.A.R.S.--a rescue squad sent into the community to investigate the ominous mansion at the core of the disaster. Take the role of operative Jill Valentine or Chris Redfield and uncover the secrets behind a radical, genetic research facility. With an array of weapons to master and horrors around every corner, the ultimate test may be just to make it out alive.', '2000 - 1990', 'resident-evil-for-playstation-classic', '2020-10-29 19:01:05', '2020-10-29 19:01:05');\
+\
+--\
+-- Indexes for dumped tables\
+--\
+\
+--\
+-- Indexes for table `migrations`\
+--\
+ALTER TABLE `migrations`\
+  ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `posts`\
+--\
+ALTER TABLE `posts`\
+  ADD PRIMARY KEY (`id`),\
+  ADD UNIQUE KEY `posts_slug_unique` (`slug`);\
+\
+--\
+-- AUTO_INCREMENT for dumped tables\
+--\
+\
+--\
+-- AUTO_INCREMENT for table `migrations`\
+--\
+ALTER TABLE `migrations`\
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;\
+\
+--\
+-- AUTO_INCREMENT for table `posts`\
+--\
+ALTER TABLE `posts`\
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;\
+}
